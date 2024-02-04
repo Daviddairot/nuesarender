@@ -2,10 +2,6 @@ from django.contrib import admin
 from .models import President, UserProfile, Vice_President, General_Secretary, Financial_Secretary, Social_Director, Technical_Director, Sports_Director, Public_Relations_Officer, Treasurer, Welfare_Director, P_R_O1, P_R_O2, assistant_general_secretary, assistant_social_director
 
 
-@admin.register(UserProfile)
-class UserProfileAdmin(admin.ModelAdmin):
-    list_display = ('matric_number', 'has_voted')
-    search_fields = ('matric_number',)
 
 @admin.register(President)
 class PresidentAdmin(admin.ModelAdmin):
@@ -77,3 +73,10 @@ class AssistantGeneralSecretaryAdmin(admin.ModelAdmin):
 class assistant_social_directoraryAdmin(admin.ModelAdmin):
     list_display = ('name', 'department', 'level')
     search_fields = ('name', 'department', 'level')
+
+
+@admin.register(UserProfile)
+class UserProfileAdmin(admin.ModelAdmin):
+    list_display = ('matric_number', 'has_voted')
+    search_fields = ('matric_number',)
+
