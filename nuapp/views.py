@@ -241,3 +241,194 @@ def end(request):
             'pro1_candidates': pro1_candidates,
             'pro2_candidates': pro2_candidates,
         })
+
+#update
+def upload(request):
+    if request.method == 'POST':
+        # Process form data here
+        president_name = request.POST.get('president_name')
+        president_picture = request.FILES.get('president_picture')
+        president_department = request.POST.get('president_department')
+        president_level = request.POST.get('president_level')
+        president_votes = request.POST.get('president_votes')
+        president = President.objects.create(name=president_name, picture=president_picture, department=president_department, level=president_level, votes=president_votes)
+
+        vice_president_name = request.POST.get('vice_president_name')
+        vice_president_picture = request.FILES.get('vice_president_picture')
+        vice_president_department = request.POST.get('vice_president_department')
+        vice_president_level = request.POST.get('vice_president_level')
+        vice_president_votes = request.POST.get('vice_president_votes')
+        vice_president = Vice_President.objects.create(name=vice_president_name, picture=vice_president_picture, department=vice_president_department, level=vice_president_level, votes=vice_president_votes)
+
+        general_secretary_name = request.POST.get('general_secretary_name')
+        general_secretary_picture = request.FILES.get('general_secretary_picture')
+        general_secretary_department = request.POST.get('general_secretary_department')
+        general_secretary_level = request.POST.get('general_secretary_level')
+        general_secretary_votes = request.POST.get('general_secretary_votes')
+        general_secretary = General_Secretary.objects.create(name=general_secretary_name, picture=general_secretary_picture, department=general_secretary_department, level=general_secretary_level, votes=general_secretary_votes)
+
+        financial_secretary_name = request.POST.get('financial_secretary_name')
+        financial_secretary_picture = request.FILES.get('financial_secretary_picture')
+        financial_secretary_department = request.POST.get('financial_secretary_department')
+        financial_secretary_level = request.POST.get('financial_secretary_level')
+        financial_secretary_votes = request.POST.get('financial_secretary_votes')
+        financial_secretary = Financial_Secretary.objects.create(name=financial_secretary_name, picture=financial_secretary_picture, department=financial_secretary_department, level=financial_secretary_level, votes=financial_secretary_votes)
+
+        social_director_name = request.POST.get('social_director_name')
+        social_director_picture = request.FILES.get('social_director_picture')
+        social_director_department = request.POST.get('social_director_department')
+        social_director_level = request.POST.get('social_director_level')
+        social_director_votes = request.POST.get('social_director_votes')
+        social_director = Social_Director.objects.create(name=social_director_name, picture=social_director_picture, department=social_director_department, level=social_director_level, votes=social_director_votes)
+
+        technical_director_name = request.POST.get('technical_director_name')
+        technical_director_picture = request.FILES.get('technical_director_picture')
+        technical_director_department = request.POST.get('technical_director_department')
+        technical_director_level = request.POST.get('technical_director_level')
+        technical_director_votes = request.POST.get('technical_director_votes')
+        technical_director = Technical_Director.objects.create(name=technical_director_name, picture=technical_director_picture, department=technical_director_department, level=technical_director_level, votes=technical_director_votes)
+
+        sports_director_name = request.POST.get('sports_director_name')
+        sports_director_picture = request.FILES.get('sports_director_picture')
+        sports_director_department = request.POST.get('sports_director_department')
+        sports_director_level = request.POST.get('sports_director_level')
+        sports_director_votes = request.POST.get('sports_director_votes')
+        sports_director = Sports_Director.objects.create(name=sports_director_name, picture=sports_director_picture, department=sports_director_department, level=sports_director_level, votes=sports_director_votes)
+
+
+        treasurer_name = request.POST.get('treasurer_name')
+        treasurer_picture = request.FILES.get('treasurer_picture')
+        treasurer_department = request.POST.get('treasurer_department')
+        treasurer_level = request.POST.get('treasurer_level')
+        treasurer_votes = request.POST.get('treasurer_votes')
+        treasurer = Treasurer.objects.create(name=treasurer_name, picture=treasurer_picture, department=treasurer_department, level=treasurer_level, votes=treasurer_votes)
+
+        welfare_director_name = request.POST.get('welfare_director_name')
+        welfare_director_picture = request.FILES.get('welfare_director_picture')
+        welfare_director_department = request.POST.get('welfare_director_department')
+        welfare_director_level = request.POST.get('welfare_director_level')
+        welfare_director_votes = request.POST.get('welfare_director_votes')
+        welfare_director = Welfare_Director.objects.create(name=welfare_director_name, picture=welfare_director_picture, department=welfare_director_department, level=welfare_director_level, votes=welfare_director_votes)
+
+        assistant_general_secretary_name = request.POST.get('assistant_general_secretary_name')
+        assistant_general_secretary_picture = request.FILES.get('assistant_general_secretary_picture')
+        assistant_general_secretary_department = request.POST.get('assistant_general_secretary_department')
+        assistant_general_secretary_level = request.POST.get('assistant_general_secretary_level')
+        assistant_general_secretary_votes = request.POST.get('assistant_general_secretary_votes')
+        assistant_general_secretarys = assistant_general_secretary.objects.create(name=assistant_general_secretary_name, picture=assistant_general_secretary_picture, department=assistant_general_secretary_department, level=assistant_general_secretary_level, votes=assistant_general_secretary_votes)
+
+        assistant_social_director_name = request.POST.get('assistant_social_director_name')
+        assistant_social_director_picture = request.FILES.get('assistant_social_director_picture')
+        assistant_social_director_department = request.POST.get('assistant_social_director_department')
+        assistant_social_director_level = request.POST.get('assistant_social_director_level')
+        assistant_social_director_votes = request.POST.get('assistant_social_director_votes')
+        assistant_social_directors = assistant_social_director.objects.create(name=assistant_social_director_name, picture=assistant_social_director_picture, department=assistant_social_director_department, level=assistant_social_director_level, votes=assistant_social_director_votes)
+
+        P_R_O1_name = request.POST.get('pro1_name')
+        P_R_O1_picture = request.FILES.get('pro1_picture')
+        P_R_O1_department = request.POST.get('pro1_department')
+        P_R_O1_level = request.POST.get('pro1_level')
+        P_R_O1_votes = request.POST.get('pro1_votes')
+        P_R_O1s = P_R_O1.objects.create(name=P_R_O1_name, picture=P_R_O1_picture, department=P_R_O1_department, level=P_R_O1_level, votes=P_R_O1_votes)
+
+        P_R_O2_name = request.POST.get('pro2_name')
+        P_R_O2_picture = request.FILES.get('pro2_picture')
+        P_R_O2_department = request.POST.get('pro2_department')
+        P_R_O2_level = request.POST.get('pro2_level')
+        P_R_O2_votes = request.POST.get('pro2_votes')
+        P_R_O2s = P_R_O2.objects.create(name=P_R_O2_name, picture=P_R_O2_picture, department=P_R_O2_department, level=P_R_O2_level, votes=P_R_O2_votes)
+
+  
+        return render(request, 'upload.html', {'success_message': 'Data saved successfully'})
+    else:
+        return render(request, 'upload.html', {'success_message': 'Data not saved'})
+    
+#update
+def candidate_list(request):
+    presidents = President.objects.all()
+    vice_presidents = Vice_President.objects.all()
+    general_secretaries = General_Secretary.objects.all()
+    welfare_directors = Welfare_Director.objects.all()
+    financial_secretaries = Financial_Secretary.objects.all()
+    social_directors = Social_Director.objects.all()
+    technical_directors = Technical_Director.objects.all()
+    sports_directors = Sports_Director.objects.all()
+    treasurers = Treasurer.objects.all()
+    pro1s = P_R_O1.objects.all()
+    pro2s = P_R_O2.objects.all()
+    assistant_general_secretaries = assistant_general_secretary.objects.all()
+    assistant_social_directors = assistant_social_director.objects.all()
+        
+    return render(request, 'candidate_list.html', {
+        'presidents': presidents,
+        'vice_presidents': vice_presidents,
+        'general_secretaries': general_secretaries,
+        'financial_secretaries': financial_secretaries,
+        'social_directors': social_directors,
+        'technical_directors': technical_directors,
+        'sports_directors': sports_directors,
+        'treasurers': treasurers,
+        'welfare_directors': welfare_directors,
+        'assistant_general_secretaries': assistant_general_secretaries,
+        'assistant_social_directors': assistant_social_directors,
+        'pro1s': pro1s,
+        'pro2s': pro2s,
+    })
+
+def delete_candidate(request, position, candidate_id):
+    # Determine the model based on the position
+    model_map = {
+        'president': President,
+        'user_profile': UserProfile,
+        'vice_president': Vice_President,
+        'general_secretary': General_Secretary,
+        'financial_secretary': Financial_Secretary,
+        'social_director': Social_Director,
+        'technical_director': Technical_Director,
+        'sports_director': Sports_Director,
+        'treasurer': Treasurer,
+        'welfare_director': Welfare_Director,
+        'assistant_general_secretary': assistant_general_secretary,
+        'assistant_social_director': assistant_social_director,
+        'pro1': P_R_O1,
+        'pro2': P_R_O2,
+    }
+    
+    model = model_map.get(position)
+    if model:
+        try:
+            candidate = model.objects.get(pk=candidate_id)
+            candidate.delete()
+        except model.DoesNotExist:
+            pass
+
+    return redirect('candidate_list')
+
+
+def custom_signup(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            raw_password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=raw_password)
+            login(request, user)
+            return redirect('custom_login')  # Redirect to home page after successful sign-up
+    else:
+        form = UserCreationForm()
+    return render(request, 'signup.html', {'form': form})
+
+
+def custom_login(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            return redirect('upload')  # Redirect to home page after successful login
+        else:
+            messages.error(request, 'Invalid username or password')
+
+    return render(request, 'login.html')
