@@ -13,6 +13,7 @@ urlpatterns = [
     path('vote/', views.vote, name='vote'),
     path('end/', views.end, name='end'),
     path('vote_submit/', views.vote_submit, name='vote_submit'),
+    path('close/', views.close, name='close'),
 ]
 
 if settings.DEBUG:
