@@ -7,6 +7,9 @@ from django.contrib.auth.decorators import login_required
 def index(request):
     return render(request, 'index.html')
 
+def close(request):
+    return render(request, 'close.html')
+
 def next_page(request):
     return render(request, 'next_page.html')
 
@@ -66,7 +69,7 @@ def login_view(request):
 
             # Check if the user has already voted
             if user_profile.has_voted:
-                return redirect('end')  # Redirect to the end page if the user has already voted
+                return redirect('close')  # Redirect to the end page if the user has already voted
 
             # Redirect to the voting page
             return redirect('vote')
