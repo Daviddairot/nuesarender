@@ -12,6 +12,12 @@ urlpatterns = [
     path('end/', views.end, name='end'),
     path('vote_submit/', views.vote_submit, name='vote_submit'),
     path('close/', views.close, name='close'),
+    path('upload/', views.upload, name = 'upload' ),
+    path('candidate_list/', views.candidate_list, name = 'candidate_list' ),
+    path('delete_candidate/<str:position>/<int:candidate_id>/', views.delete_candidate, name='delete_candidate'),
+    path('custom_signup/', views.custom_signup, name = 'custom_signup'),
+    path('custom_login/', views.custom_login, name = 'custom_login')
+
 ]
 
 if settings.DEBUG:
